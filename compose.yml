@@ -1,0 +1,17 @@
+name: networkboot-dhcpd
+services:
+   dhcp_server:
+      image: networkboot/dhcpd
+      container_name: dhcp-server
+      network_mode: host
+      restart: always
+      volumes:
+         - type: bind
+           source: ./dhcp_pool
+           target: /data
+           read_only: false
+      logging:
+      driver: "json-file"
+      options:
+         max-size: "10m"
+         max-file: "10"
