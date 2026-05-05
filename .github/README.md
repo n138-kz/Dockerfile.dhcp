@@ -63,3 +63,9 @@
   ```sh
   vi dhcp_pool/dhcpd.conf
   ```
+
+3. Run the `docker compose up -d` then `docker compose logs`
+
+  ```sh
+  docker compose up -d && docker compose logs
+  ```
