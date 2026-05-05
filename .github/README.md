@@ -4,25 +4,6 @@
 
 <details>
 
-### …or create a new repository on the command line
-
-```sh
-touch README.md
-git init
-git add README.md
-git commit -m init
-git branch -M main
-git remote add origin git@github.com:n138-kz/Dockerfile.dhcp.git
-git branch --set-upstream-to=origin/main main
-git config pull.rebase false
-git fetch
-git pull
-git merge --allow-unrelated-histories origin/main
-git push -u origin main
-```
-
-- [git merge --allow-unrelated-histories origin/main](https://qiita.com/mei28/items/85bc881ac1f26332ac15)
-
 ### …or push an existing repository from the command line
 
 ```sh
