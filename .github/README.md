@@ -68,5 +68,6 @@
   docker compose up -d を実行してから docker compose logs を実行してください。
 
   ```sh
-  docker compose up -d && docker compose logs
+  docker compose up -d
+  docker compose logs
   ```
