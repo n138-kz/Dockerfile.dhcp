@@ -1,6 +1,8 @@
 # .gitignore generator
 # https://www.toptal.com/developers/gitignore
 
+dhcp_pool/
+
 # Backup files
 Backup/
 backup/
