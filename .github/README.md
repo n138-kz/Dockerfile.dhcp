@@ -12,16 +12,6 @@ git branch -M main
 git push -u origin main
 ```
 
-### pull an another existing repository from the command line
-
-```sh
-git config pull.rebase false
-git branch -r
-git pull origin {remote-repos-name}:{local-repos-name}
-git checkout {local-repos-name}
-git branch --set-upstream-to=origin/{remote-repos-name} {local-repos-name}
-```
-
 </details>
 
 ## github repository initial setup
