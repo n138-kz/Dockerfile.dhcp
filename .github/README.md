@@ -4,16 +4,6 @@
 
 <details>
 
-### if you’ve done this kind of thing before
-
-```sh
-git clone https://github.com/n138-kz/Dockerfile.dhcp.git
-```
-
-```sh
-git clone git@github.com:n138-kz/Dockerfile.dhcp.git
-```
-
 ### …or create a new repository on the command line
 
 ```sh
