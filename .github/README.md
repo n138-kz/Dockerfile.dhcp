@@ -45,3 +45,17 @@
 ## License
 
 [Copyright (c) 2026 Yuu Komiya (n138), Under MIT License](LICENSE)  
+
+## How to use
+
+1. Create `dhcp_pool` directory.
+
+  ```sh
+  mkdir dhcp_pool
+  ```
+
+2. Create `dhcp_pool/dhcpd.conf` with a subnet clause for the specified network interface.
+
+  ```sh
+  vi dhcp_pool/dhcpd.conf
+  ```
