@@ -64,7 +64,8 @@
   vi dhcp_pool/dhcpd.conf
   ```
 
-3. Run the `docker compose up -d` then `docker compose logs`
+3. Run the `docker compose up -d` then `docker compose logs`  
+  docker compose up -d を実行してから docker compose logs を実行してください。
 
   ```sh
   docker compose up -d && docker compose logs
