@@ -1,19 +1,5 @@
 # [Dockerfile.dhcp](https://github.com/n138-kz/Dockerfile.dhcp)
 
-## Quick setup
-
-<details>
-
-### …or push an existing repository from the command line
-
-```sh
-git remote add origin git@github.com:n138-kz/Dockerfile.dhcp.git
-git branch -M main
-git push -u origin main
-```
-
-</details>
-
 ## github repository initial setup
 
 1. ["Actions secrets and variables"](https://github.com/n138-kz/Dockerfile.dhcp/settings/secrets/actions) > "Repository secrets" 移動し、`DISCORD_WEBHOOK_URL` を設定  
