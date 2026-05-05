@@ -11,7 +11,7 @@ services:
            target: /data
            read_only: false
       logging:
-      driver: "json-file"
-      options:
-         max-size: "10m"
-         max-file: "10"
+         driver: "json-file"
+         options:
+            max-size: "10m"
+            max-file: "10"
