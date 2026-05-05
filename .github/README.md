@@ -1,10 +1,5 @@
 # [Dockerfile.dhcp](https://github.com/n138-kz/Dockerfile.dhcp)
 
-## github repository initial setup
-
-- [x] 1. ["Actions secrets and variables"](https://github.com/n138-kz/Dockerfile.dhcp/settings/secrets/actions) > "Repository secrets" 移動し、`DISCORD_WEBHOOK_URL` を設定  
-  値は Discord webhook url を設定
-
 ## Repos Info
 
 <div align="center">
