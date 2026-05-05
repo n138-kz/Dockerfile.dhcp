@@ -48,15 +48,15 @@
 
 ## How to use
 
-1. Create `dhcp_pool` directory.
-  dhcp_poolディレクトリを作成します。
+1. Create `dhcp_pool` directory.  
+  dhcp_poolディレクトリを作成します。  
 
   ```sh
   mkdir dhcp_pool
   ```
 
-2. Create `dhcp_pool/dhcpd.conf` with a subnet clause for the specified network interface.
-   指定されたネットワークインターフェースのサブネット句を含むdhcp_pool/dhcpd.confファイルを作成します。
+2. Create `dhcp_pool/dhcpd.conf` with a subnet clause for the specified network interface.  
+   指定されたネットワークインターフェースのサブネット句を含むdhcp_pool/dhcpd.confファイルを作成します。  
 
   ```sh
   vi dhcp_pool/dhcpd.conf
