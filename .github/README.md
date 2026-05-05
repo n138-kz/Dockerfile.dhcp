@@ -57,7 +57,6 @@
 
 2. Create `dhcp_pool/dhcpd.conf` with a subnet clause for the specified network interface.  
   指定されたネットワークインターフェースのサブネット句を含むdhcp_pool/dhcpd.confファイルを作成します。  
-  
   If you need assistance, you can run docker run -it --rm networkboot/dhcpd man dhcpd.conf for a description of the configuration file syntax.  
   サポートが必要な場合は、`docker run -it --rm networkboot/dhcpd man dhcpd.conf` を実行し、設定ファイルの構文の説明については `man dhcpd.conf` を参照してください。  
 
