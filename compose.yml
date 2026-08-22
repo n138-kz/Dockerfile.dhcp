@@ -1,6 +1,6 @@
 name: networkboot-dhcpd
 services:
-    dhcp_server:
+    dhcp:
         image: networkboot/dhcpd
         container_name: dhcp-server
         network_mode: host
@@ -12,18 +12,31 @@ services:
               read_only: false
               bind:
                   create_host_path: true
+            - type: bind
+              source: ./container-dhcp
+              target: /app
+              read_only: true
+              bind:
+                  create_host_path: true
         logging:
             driver: "json-file"
             options:
                 max-size: "10m"
                 max-file: "10"
+        environment:
+            DISCORD_WEBHOOK_URL: ${DISCORD_WEBHOOK_URL:-}
+            INTERNAL_POSTGRES_DB: ${INTERNAL_POSTGRES_DB:-myapp}
+            INTERNAL_POSTGRES_USER: ${INTERNAL_POSTGRES_USER:-postgres}
+            INTERNAL_POSTGRES_PASSWORD: ${INTERNAL_POSTGRES_PASSWORD:-postgres}
+        depends_on:
+            - db
     db:
         image: postgres:16-alpine
         restart: unless-stopped
         environment:
-            POSTGRES_DB: myapp
-            POSTGRES_USER: postgres
-            POSTGRES_PASSWORD: password
+            POSTGRES_DB: ${INTERNAL_POSTGRES_DB:-myapp}
+            POSTGRES_USER: ${INTERNAL_POSTGRES_USER:-postgres}
+            POSTGRES_PASSWORD: ${INTERNAL_POSTGRES_PASSWORD:-postgres}
         volumes:
             - ./container-db-build:/docker-entrypoint-initdb.d/
             - pgdata:/var/lib/postgresql/data
@@ -37,8 +50,8 @@ services:
         ports:
             - "8080-65535:80"
         environment:
-            PGADMIN_DEFAULT_EMAIL: ${INTERNAL_PGADMIN_EMAIL:-sqladmin@localhost.local}
-            PGADMIN_DEFAULT_PASSWORD: ${INTERNAL_PGADMIN_PASSWORD:-password}
+            PGADMIN_DEFAULT_EMAIL: ${INTERNAL_PGADMIN_EMAIL:-sqladmin@example.org}
+            PGADMIN_DEFAULT_PASSWORD: ${INTERNAL_PGADMIN_PASSWORD:-postgres}
         volumes:
             - pgadmin-store:/var/lib/pgadmin
         depends_on:
