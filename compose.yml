@@ -10,6 +10,8 @@ services:
               source: ./dhcp_pool
               target: /data
               read_only: false
+              bind:
+                  create_host_path: true
         logging:
             driver: "json-file"
             options:
